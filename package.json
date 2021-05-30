@@ -1,0 +1,15 @@
+{
+  "name": "my-garden-ariful",
+  "version": "1.0.0",
+  "description": "root folder",
+  "main": "app.js",
+  "scripts": {
+    "start": "concurrently \"npm start --prefix backend\"   \"npm start --prefix frontend\" ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ELena T",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^6.1.0"
+  }
+}
