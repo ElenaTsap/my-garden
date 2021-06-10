@@ -4,8 +4,9 @@ require('dotenv').config();
 const connectDB = require('./config/db');
 /* const cors = require('cors') */
 const plants = require('./router/plants');
+const path = require('path');
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 5000;
 
 connectDB();
 
@@ -20,6 +21,7 @@ let allowCrossDomain = function(req, res, next) {
     next();
 } 
 app.use(allowCrossDomain);
+app.use(express.static(path.join(__dirname, 'public'))); 
 
 app.use('/plants', plants);
 

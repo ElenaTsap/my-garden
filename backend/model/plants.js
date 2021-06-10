@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
 const plants = new mongoose.Schema({
-    name: {
+    plantName: {
         type: String,
-        required: false
+        required: true
     }, 
     photo: {
         type: String,
